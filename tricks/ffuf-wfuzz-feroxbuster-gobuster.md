@@ -7,9 +7,11 @@
 gobuster dir -u IP -w WORDLIST -x EXTENSION -t 70
 
 # vhosts mode
-gobuster vhost -u DOMAIN|IP -w WORDLIST -t 100 [-r]
 # try -r if need to use wildcard
+gobuster vhost -u DOMAIN|IP -w WORDLIST -t 100 [-r]
+gobuster dns -d DOMAIN -w WORDLIST -t 30
 
+# proxy
 --proxy scheme://IP:PORT (ex. socks5://127.0.0.1:6900)
 ```
 
