@@ -1,4 +1,19 @@
-# NMAP
+# nmap
+
+## Important nmap-scripts
+
+```bash
+--script=SCRIPT1,SCRIPT2...
+
+# scripts
+http-enum
+http-methods
+http-wordpress-enum
+http-ls
+http-robots.txt
+http-cookie-flags
+http-cors
+```
 
 ## static binary build
 

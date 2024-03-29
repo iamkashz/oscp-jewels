@@ -20,6 +20,7 @@ gobuster dns -d DOMAIN -w WORDLIST -t 30
 ```bash
 # directory mode
 wfuzz -c -t 60 -w WORDLIST -u IP/FUZZ [-b COOKIE] [-d POST-DATA] [-H HEADER] [-z TYPE,PAYLOAD]
+wfuzz -c -z file,WORDLIST [flags] [URL/FUZZ | URL?param=FUZZ]
 -c: show output in color
 -z: alias for -z file,WORDLIST; can do -z range,1-100
 
